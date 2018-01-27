@@ -1,10 +1,14 @@
 package com.abitech.abuzaraslam.mvpapplication.main;
 
+import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.abitech.abuzaraslam.mvpapplication.R;
+import com.abitech.abuzaraslam.mvpapplication.databinding.MainActivityBinding;
 
 /**
  * Displays the main screen
@@ -15,11 +19,15 @@ public class MainActivity extends AppCompatActivity implements MainContract.MvpV
 
     private MainPresenter mPresenter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        MainActivityBinding binding= DataBindingUtil.setContentView(this,R.layout.main_activity);
         mPresenter=new MainPresenter(this);
+        binding.setPresenter(mPresenter);
+
+
 
     }
 
