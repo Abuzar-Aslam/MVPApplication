@@ -23,6 +23,7 @@ public class MainPresenterTest {
         MockitoAnnotations.initMocks(this);
         mPresenter=new MainPresenter(mView);
 
+
     }
 
     @Test
