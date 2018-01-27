@@ -1,5 +1,7 @@
 package com.abitech.abuzaraslam.mvpapplication.main;
 
+import android.view.View;
+
 import com.abitech.abuzaraslam.mvpapplication.main.MainContract;
 
 /**
@@ -21,13 +23,13 @@ public class MainPresenter implements MainContract.Presenter {
 
     //////Presenter methods   ///////
     @Override
-    public void handleSignInButtonClick() {
+    public void handleSignInButtonClick(View view) {
 
         mView.ShowSignInScreen();
     }
 
     @Override
-    public void handleSignUpButtonClick() {
+    public void handleSignUpButtonClick(View view) {
 
         mView.ShowSignUpScreen();
     }
